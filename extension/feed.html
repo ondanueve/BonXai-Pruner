@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>BonXai · Feed curado</title>
+  <link rel="stylesheet" href="feed.css">
+</head>
+<body>
+  <header>
+    <div class="brand">
+      <img src="icons/icon48.png" alt="" width="22" height="22">
+      <h1>Feed curado</h1>
+      <span id="count" class="hint"></span>
+    </div>
+    <p class="hint">Posts que pasaron tus filtros <strong>Solo mostrar</strong> mientras navegabas x.com. Se guardan solo en este equipo (últimos 200).</p>
+    <div class="toolbar">
+      <input id="search" type="search" placeholder="Buscar en el feed…" aria-label="Buscar">
+      <button type="button" id="btnClear" class="link-btn">Vaciar</button>
+    </div>
+    <div id="chips" class="chips" role="group" aria-label="Filtrar por tema"></div>
+  </header>
+
+  <main>
+    <p id="empty" class="empty" hidden></p>
+    <ul id="list" class="list"></ul>
+  </main>
+
+  <script src="lib/rules.js"></script>
+  <script src="feed.js"></script>
+</body>
+</html>

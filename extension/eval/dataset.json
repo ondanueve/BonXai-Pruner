@@ -1,0 +1,467 @@
+{
+ "description": "Set de evaluación SINTÉTICO, escrito y etiquetado a mano para BonXai Pruner (no son tweets reales). Etiqueta true = el post coincide con el tema. Ampliar con posts reales antes de sacar conclusiones.",
+ "topics": [
+  {
+   "id": "politica",
+   "prompt": "debates políticos, elecciones, campañas o peleas partidarias"
+  },
+  {
+   "id": "messi",
+   "prompt": "elogios, goles o admiración por Lionel Messi"
+  },
+  {
+   "id": "tech",
+   "prompt": "anuncios de tecnología, lanzamientos de software, modelos de IA o papers de ingeniería"
+  },
+  {
+   "id": "poesia",
+   "prompt": "poesía o versos con rima"
+  },
+  {
+   "id": "cripto",
+   "prompt": "criptomonedas, NFTs o promesas de ganancias rápidas con trading"
+  }
+ ],
+ "items": [
+  {
+   "id": "e01",
+   "text": "El Congreso vuelve a discutir el presupuesto y la oposición ya anunció que no da quórum.",
+   "labels": {
+    "politica": true,
+    "messi": false,
+    "tech": false,
+    "poesia": false,
+    "cripto": false
+   }
+  },
+  {
+   "id": "e02",
+   "text": "Votá el domingo. No dejes que otros decidan por vos. #Elecciones2027",
+   "labels": {
+    "politica": true,
+    "messi": false,
+    "tech": false,
+    "poesia": false,
+    "cripto": false
+   }
+  },
+  {
+   "id": "e03",
+   "text": "Qué vergüenza el debate presidencial de anoche, ninguno respondió una sola pregunta.",
+   "labels": {
+    "politica": true,
+    "messi": false,
+    "tech": false,
+    "poesia": false,
+    "cripto": false
+   }
+  },
+  {
+   "id": "e04",
+   "text": "The senator's new bill is a disgrace and everyone who supports it should resign.",
+   "labels": {
+    "politica": true,
+    "messi": false,
+    "tech": false,
+    "poesia": false,
+    "cripto": false
+   }
+  },
+  {
+   "id": "e05",
+   "text": "Polls show the incumbent leading by 4 points ahead of the runoff.",
+   "labels": {
+    "politica": true,
+    "messi": false,
+    "tech": false,
+    "poesia": false,
+    "cripto": false
+   }
+  },
+  {
+   "id": "e06",
+   "text": "Este gobierno es un desastre y el anterior era peor, no se salva nadie.",
+   "labels": {
+    "politica": true,
+    "messi": false,
+    "tech": false,
+    "poesia": false,
+    "cripto": false
+   }
+  },
+  {
+   "id": "e07",
+   "text": "Mi abuela votó por primera vez a los 90 años. Orgullo total ❤️",
+   "labels": {
+    "politica": true,
+    "messi": false,
+    "tech": false,
+    "poesia": false,
+    "cripto": false
+   }
+  },
+  {
+   "id": "e08",
+   "text": "Messi otra vez: tiro libre al ángulo en el minuto 89. Es de otro planeta 🐐",
+   "labels": {
+    "politica": false,
+    "messi": true,
+    "tech": false,
+    "poesia": false,
+    "cripto": false
+   }
+  },
+  {
+   "id": "e09",
+   "text": "Leo Messi just broke another record. The greatest to ever do it.",
+   "labels": {
+    "politica": false,
+    "messi": true,
+    "tech": false,
+    "poesia": false,
+    "cripto": false
+   }
+  },
+  {
+   "id": "e10",
+   "text": "Ver jugar a Messi es un privilegio que vamos a contarle a nuestros nietos.",
+   "labels": {
+    "politica": false,
+    "messi": true,
+    "tech": false,
+    "poesia": false,
+    "cripto": false
+   }
+  },
+  {
+   "id": "e11",
+   "text": "Golazo de Messi, gambeta a tres y la pica por arriba del arquero.",
+   "labels": {
+    "politica": false,
+    "messi": true,
+    "tech": false,
+    "poesia": false,
+    "cripto": false
+   }
+  },
+  {
+   "id": "e12",
+   "text": "Messi is overrated and only wins because of his teammates.",
+   "labels": {
+    "politica": false,
+    "messi": false,
+    "tech": false,
+    "poesia": false,
+    "cripto": false
+   }
+  },
+  {
+   "id": "e13",
+   "text": "Messi y Milei se sacaron una foto y explotó la discusión política en redes.",
+   "labels": {
+    "politica": true,
+    "messi": false,
+    "tech": false,
+    "poesia": false,
+    "cripto": false
+   }
+  },
+  {
+   "id": "e14",
+   "text": "Lanzamos la versión 2.0 de nuestra librería: 3x más rápida y con soporte para WebGPU.",
+   "labels": {
+    "politica": false,
+    "messi": false,
+    "tech": true,
+    "poesia": false,
+    "cripto": false
+   }
+  },
+  {
+   "id": "e15",
+   "text": "New open-weights model released today, beats last year's SOTA on coding benchmarks.",
+   "labels": {
+    "politica": false,
+    "messi": false,
+    "tech": true,
+    "poesia": false,
+    "cripto": false
+   }
+  },
+  {
+   "id": "e16",
+   "text": "Paper nuevo: compresión de KV cache para modelos de lenguaje con 50% menos memoria.",
+   "labels": {
+    "politica": false,
+    "messi": false,
+    "tech": true,
+    "poesia": false,
+    "cripto": false
+   }
+  },
+  {
+   "id": "e17",
+   "text": "Chrome 140 trae nuevas APIs de IA integradas en el navegador para extensiones.",
+   "labels": {
+    "politica": false,
+    "messi": false,
+    "tech": true,
+    "poesia": false,
+    "cripto": false
+   }
+  },
+  {
+   "id": "e18",
+   "text": "Se me rompió el celular y el técnico me cobró una fortuna, odio la tecnología.",
+   "labels": {
+    "politica": false,
+    "messi": false,
+    "tech": false,
+    "poesia": false,
+    "cripto": false
+   }
+  },
+  {
+   "id": "e19",
+   "text": "Our startup just shipped a Rust rewrite of the ingestion pipeline. Latency down 40%.",
+   "labels": {
+    "politica": false,
+    "messi": false,
+    "tech": true,
+    "poesia": false,
+    "cripto": false
+   }
+  },
+  {
+   "id": "e20",
+   "text": "Bitcoin rompe máximos: si no compraste ayer, todavía estás a tiempo de hacerte rico 🚀",
+   "labels": {
+    "politica": false,
+    "messi": false,
+    "tech": false,
+    "poesia": false,
+    "cripto": true
+   }
+  },
+  {
+   "id": "e21",
+   "text": "Este NFT se va a x100 la semana que viene, link en mi bio para entrar en la preventa.",
+   "labels": {
+    "politica": false,
+    "messi": false,
+    "tech": false,
+    "poesia": false,
+    "cripto": true
+   }
+  },
+  {
+   "id": "e22",
+   "text": "Hice 5000 USD en una semana con este bot de trading, mandame DM y te explico.",
+   "labels": {
+    "politica": false,
+    "messi": false,
+    "tech": false,
+    "poesia": false,
+    "cripto": true
+   }
+  },
+  {
+   "id": "e23",
+   "text": "La blockchain tiene usos interesantes en trazabilidad de alimentos, según este paper.",
+   "labels": {
+    "politica": false,
+    "messi": false,
+    "tech": true,
+    "poesia": false,
+    "cripto": false
+   }
+  },
+  {
+   "id": "e24",
+   "text": "Ethereum gas fees are insane today, can't even move my tokens.",
+   "labels": {
+    "politica": false,
+    "messi": false,
+    "tech": false,
+    "poesia": false,
+    "cripto": true
+   }
+  },
+  {
+   "id": "e25",
+   "text": "En la orilla del río la tarde se dormía, / y el viento le cantaba lo que el agua no decía.",
+   "labels": {
+    "politica": false,
+    "messi": false,
+    "tech": false,
+    "poesia": true,
+    "cripto": false
+   }
+  },
+  {
+   "id": "e26",
+   "text": "Roses are red, violets are blue, my code doesn't compile and neither do you.",
+   "labels": {
+    "politica": false,
+    "messi": false,
+    "tech": false,
+    "poesia": true,
+    "cripto": false
+   }
+  },
+  {
+   "id": "e27",
+   "text": "Bajo la luna llena / se me escapa la pena / y el silencio me llena.",
+   "labels": {
+    "politica": false,
+    "messi": false,
+    "tech": false,
+    "poesia": true,
+    "cripto": false
+   }
+  },
+  {
+   "id": "e28",
+   "text": "Hoy no tengo ganas de nada, solo café y una manta.",
+   "labels": {
+    "politica": false,
+    "messi": false,
+    "tech": false,
+    "poesia": false,
+    "cripto": false
+   }
+  },
+  {
+   "id": "e29",
+   "text": "Receta fácil: tarta de manzana con tres ingredientes y sin horno.",
+   "labels": {
+    "politica": false,
+    "messi": false,
+    "tech": false,
+    "poesia": false,
+    "cripto": false
+   }
+  },
+  {
+   "id": "e30",
+   "text": "Mañana llueve en Buenos Aires, no se olviden el paraguas.",
+   "labels": {
+    "politica": false,
+    "messi": false,
+    "tech": false,
+    "poesia": false,
+    "cripto": false
+   }
+  },
+  {
+   "id": "e31",
+   "text": "Just adopted a rescue dog and she already owns the couch.",
+   "labels": {
+    "politica": false,
+    "messi": false,
+    "tech": false,
+    "poesia": false,
+    "cripto": false
+   }
+  },
+  {
+   "id": "e32",
+   "text": "Qué partido aburrido, 0 a 0 y nadie pateó al arco.",
+   "labels": {
+    "politica": false,
+    "messi": false,
+    "tech": false,
+    "poesia": false,
+    "cripto": false
+   }
+  },
+  {
+   "id": "e33",
+   "text": "Busco recomendaciones de series para el fin de semana, ¿qué están mirando?",
+   "labels": {
+    "politica": false,
+    "messi": false,
+    "tech": false,
+    "poesia": false,
+    "cripto": false
+   }
+  },
+  {
+   "id": "e34",
+   "text": "El nuevo iPhone es igual al anterior pero más caro, como siempre.",
+   "labels": {
+    "politica": false,
+    "messi": false,
+    "tech": true,
+    "poesia": false,
+    "cripto": false
+   }
+  },
+  {
+   "id": "e35",
+   "text": "Un candidato prometió regalar criptomonedas a cada votante. Sí, en serio.",
+   "labels": {
+    "politica": true,
+    "messi": false,
+    "tech": false,
+    "poesia": false,
+    "cripto": true
+   }
+  },
+  {
+   "id": "e36",
+   "text": "Messi anunció que lanza su propio token cripto para fans.",
+   "labels": {
+    "politica": false,
+    "messi": true,
+    "tech": false,
+    "poesia": false,
+    "cripto": true
+   }
+  },
+  {
+   "id": "e37",
+   "text": "Escribí un haiku para mi gato: / duerme en la ventana / sueña con palomas.",
+   "labels": {
+    "politica": false,
+    "messi": false,
+    "tech": false,
+    "poesia": true,
+    "cripto": false
+   }
+  },
+  {
+   "id": "e38",
+   "text": "This thread explains why our national election system is broken. 🧵",
+   "labels": {
+    "politica": true,
+    "messi": false,
+    "tech": false,
+    "poesia": false,
+    "cripto": false
+   }
+  },
+  {
+   "id": "e39",
+   "text": "Gran charla hoy sobre arquitectura de microservicios en la meetup de Córdoba.",
+   "labels": {
+    "politica": false,
+    "messi": false,
+    "tech": true,
+    "poesia": false,
+    "cripto": false
+   }
+  },
+  {
+   "id": "e40",
+   "text": "Feliz cumple mamá, gracias por todo. Te quiero mucho.",
+   "labels": {
+    "politica": false,
+    "messi": false,
+    "tech": false,
+    "poesia": false,
+    "cripto": false
+   }
+  }
+ ]
+}
