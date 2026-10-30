@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>BonXai Pruner</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <header>
+    <div class="brand">
+      <img src="icons/icon48.png" alt="" width="24" height="24">
+      <span class="brand-title">BonXai Pruner</span>
+      <span class="brand-version" id="version"></span>
+    </div>
+    <label class="switch" title="Activar / pausar">
+      <input type="checkbox" id="enabled">
+      <span class="slider"></span>
+    </label>
+  </header>
+
+  <!-- Model status: never claim "active" when the model cannot run -->
+  <section class="ai-status" id="aiStatus" role="status" aria-live="polite">
+    <span id="aiStatusText">Revisando el modelo…</span>
+    <button type="button" id="btnDownload" class="btn-small" hidden>Descargar modelo</button>
+  </section>
+
+  <section>
+    <div class="section-head">
+      <h2>Filtros</h2>
+      <label class="inline">Varios “Solo mostrar”:
+        <select id="includeCombine">
+          <option value="any">cualquiera</option>
+          <option value="all">todos</option>
+        </select>
+      </label>
+    </div>
+    <ul id="filterList" class="filter-list"></ul>
+
+    <form id="addFilter" class="add-filter">
+      <div class="row">
+        <select id="newMode" aria-label="Tipo de filtro">
+          <option value="exclude">Ocultar</option>
+          <option value="include">Solo mostrar</option>
+        </select>
+        <input id="newLabel" type="text" maxlength="30" placeholder="Nombre (ej. Cripto)">
+      </div>
+      <textarea id="newPrompt" rows="2" maxlength="300" placeholder="Describí el tema (ej. criptomonedas, NFTs o promesas de ganancias rápidas)"></textarea>
+      <button type="submit" class="btn-small">+ Agregar filtro</button>
+    </form>
+  </section>
+
+  <details>
+    <summary>Fotos y videos</summary>
+    <label class="check"><input type="checkbox" id="hideImages"> Ocultar posts con imágenes</label>
+    <label class="check"><input type="checkbox" id="hideVideos"> Ocultar posts con video</label>
+    <label class="check"><input type="checkbox" id="requireMedia"> Solo posts con foto o video</label>
+    <label class="check"><input type="checkbox" id="analyzeImages"> Analizar imágenes con la IA (más lento) <span class="hint" id="imagesHint"></span></label>
+    <label class="field">Foto/video sin texto:
+      <select id="uncaptioned">
+        <option value="auto">Automático (ocultar si hay “Solo mostrar”)</option>
+        <option value="keep">Mostrar siempre</option>
+        <option value="hide">Ocultar siempre</option>
+      </select>
+    </label>
+  </details>
+
+  <details>
+    <summary>Autores (sin IA)</summary>
+    <label class="field">Nunca filtrar a:
+      <textarea id="authorsAllow" rows="2" placeholder="@usuario1 @usuario2"></textarea>
+    </label>
+    <label class="field">Ocultar siempre a:
+      <textarea id="authorsBlock" rows="2" placeholder="@usuario3"></textarea>
+    </label>
+  </details>
+
+  <details>
+    <summary>Opciones</summary>
+    <label class="field">Cómo ocultar:
+      <select id="hideStyle">
+        <option value="collapse">Colapsar con motivo y “Mostrar”</option>
+        <option value="remove">Quitar del todo</option>
+      </select>
+    </label>
+    <label class="field">Motor de IA:
+      <select id="provider">
+        <option value="nano">Gemini Nano en Chrome (recomendado)</option>
+        <option value="ollama">Modelo local propio (Ollama, localhost)</option>
+      </select>
+    </label>
+    <div id="ollamaFields" hidden>
+      <label class="field">Endpoint (solo localhost):
+        <input id="ollamaEndpoint" type="url" placeholder="http://localhost:11434/v1/chat/completions">
+      </label>
+      <label class="field">Modelo:
+        <input id="ollamaModel" type="text" placeholder="gemma3:4b">
+      </label>
+    </div>
+    <div class="row">
+      <span class="hint" id="correctionsInfo"></span>
+      <button type="button" id="btnClearCorrections" class="link-btn">Borrar correcciones</button>
+    </div>
+    <div class="row">
+      <span class="hint">Caché local de clasificaciones (3 días)</span>
+      <button type="button" id="btnClearCache" class="link-btn">Vaciar caché</button>
+    </div>
+    <a href="eval.html" target="_blank" class="link-btn">Evaluar el modelo (precisión / recall) →</a>
+  </details>
+
+  <button type="button" id="btnApply" class="btn-apply">Aplicar</button>
+  <button type="button" id="btnFeed" class="btn-secondary">🌿 Abrir feed curado <span id="curatedCount" class="hint"></span></button>
+  <p id="applyMsg" class="hint" aria-live="polite"></p>
+
+  <details id="filteredSection">
+    <summary>Últimos ocultados <span id="filteredCount" class="hint"></span></summary>
+    <ul id="filteredList" class="filtered-list"></ul>
+    <button type="button" id="btnClearLog" class="link-btn">Vaciar lista</button>
+  </details>
+
+  <footer>
+    <span class="dot" id="statusDot"></span>
+    <span id="statusMessage">…</span>
+  </footer>
+
+  <script src="lib/rules.js"></script>
+  <script src="popup.js"></script>
+</body>
+</html>

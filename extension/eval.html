@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>BonXai Pruner · Evaluación</title>
+  <style>
+    body { font: 14px/1.5 system-ui, sans-serif; background: #0b0f19; color: #f3f4f6; max-width: 860px; margin: 24px auto; padding: 0 16px; }
+    h1 { font-size: 20px; } .muted { color: #94a3b8; }
+    button { background: #10b981; color: #fff; border: 0; border-radius: 8px; padding: 8px 14px; font-weight: 700; cursor: pointer; }
+    button:disabled { opacity: .6; } select { padding: 6px; border-radius: 6px; }
+    pre { background: #151b28; border: 1px solid #242f44; border-radius: 8px; padding: 12px; overflow-x: auto; }
+    table { border-collapse: collapse; width: 100%; font-size: 12px; } td, th { border-bottom: 1px solid #242f44; padding: 4px 6px; text-align: left; }
+  </style>
+</head>
+<body>
+  <h1>Evaluar el modelo</h1>
+  <p class="muted">Corre el set etiquetado de <code>eval/dataset.json</code> contra el motor elegido y calcula precisión y recall por tema.
+    El set es <strong>sintético</strong> (posts escritos a mano, no tweets reales): sirve para comparar cambios, no como verdad absoluta.</p>
+  <p>
+    Motor:
+    <select id="provider">
+      <option value="nano">Gemini Nano (Chrome)</option>
+      <option value="ollama">Modelo local (según Opciones del popup)</option>
+    </select>
+    <button id="run" type="button">Correr evaluación</button>
+    <button id="download" type="button" hidden>Descargar resultado (JSON)</button>
+  </p>
+  <p id="status" class="muted"></p>
+  <pre id="report" hidden></pre>
+  <h2 id="mistakesTitle" hidden>Errores</h2>
+  <table id="mistakes" hidden><thead><tr><th>tema</th><th>esperado</th><th>post</th></tr></thead><tbody></tbody></table>
+
+  <script src="lib/rules.js"></script>
+  <script src="lib/classifier.js"></script>
+  <script src="lib/providers.js"></script>
+  <script src="lib/metrics.js"></script>
+  <script src="eval.js"></script>
+</body>
+</html>

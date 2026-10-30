@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a" />
+      <stop offset="100%" stop-color="#022c22" />
+    </linearGradient>
+    <linearGradient id="leafGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#34d399" />
+      <stop offset="100%" stop-color="#059669" />
+    </linearGradient>
+    <linearGradient id="shearsGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8" />
+      <stop offset="100%" stop-color="#2563eb" />
+    </linearGradient>
+  </defs>
+
+  <!-- Background Shield -->
+  <rect width="128" height="128" rx="28" fill="url(#bgGrad)" stroke="#10b981" stroke-width="3" stroke-opacity="0.3"/>
+
+  <!-- Bonsai Foliage (Cloud 1) -->
+  <circle cx="64" cy="46" r="22" fill="url(#leafGrad)" />
+  <circle cx="48" cy="52" r="16" fill="url(#leafGrad)" />
+  <circle cx="80" cy="52" r="16" fill="url(#leafGrad)" />
+  <circle cx="64" cy="36" r="14" fill="#6ee7b7" />
+
+  <!-- Bonsai Trunk & Pot -->
+  <path d="M62 64 C62 76, 56 82, 54 88 L74 88 C72 82, 66 76, 66 64 Z" fill="#92400e" />
+  <rect x="42" y="88" width="44" height="12" rx="3" fill="#334155" stroke="#64748b" stroke-width="1.5" />
+  <rect x="46" y="100" width="8" height="4" rx="1" fill="#1e293b" />
+  <rect x="74" y="100" width="8" height="4" rx="1" fill="#1e293b" />
+
+  <!-- Pruning Shears / Scissors Cut Symbol (Top Right overlay) -->
+  <g transform="translate(76, 20) scale(0.65)">
+    <circle cx="12" cy="40" r="8" fill="none" stroke="#38bdf8" stroke-width="3.5"/>
+    <circle cx="36" cy="40" r="8" fill="none" stroke="#38bdf8" stroke-width="3.5"/>
+    <line x1="17" y1="34" x2="38" y2="6" stroke="#38bdf8" stroke-width="3.5" stroke-linecap="round"/>
+    <line x1="31" y1="34" x2="10" y2="6" stroke="#38bdf8" stroke-width="3.5" stroke-linecap="round"/>
+    <circle cx="24" cy="22" r="2.5" fill="#f8fafc"/>
+  </g>
+</svg>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>BonXai Pruner · Filtros con IA para tu feed de X</title>
+  <meta name="description" content="Extensión de Chrome que poda tu feed de X con Gemini Nano, dentro de tu navegador. Gratis, privada, sin APIs en la nube.">
+  <link rel="canonical" href="https://ondanueve.github.io/BonXai-Pruner/">
+  <link rel="icon" type="image/png" href="icon.png">
+  <meta property="og:title" content="BonXai Pruner">
+  <meta property="og:description" content="Filtros con IA para tu feed de X, con Gemini Nano dentro de Chrome. Gratis y privado.">
+  <meta property="og:url" content="https://ondanueve.github.io/BonXai-Pruner/">
+  <style>
+    :root { color-scheme: dark; --bg:#0b0f19; --card:#151b28; --border:#242f44; --text:#f3f4f6; --muted:#94a3b8; --accent:#10b981; }
+    * { box-sizing: border-box; }
+    body { margin:0; background:var(--bg); color:var(--text); font:16px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif; }
+    .wrap { max-width:760px; margin:0 auto; padding:40px 20px 60px; }
+    header { display:flex; align-items:center; gap:16px; }
+    header img { border-radius:22px; }
+    h1 { margin:0; font-size:2rem; }
+    h2 { margin-top:2.2rem; font-size:1.25rem; }
+    .tag { color:var(--muted); margin:2px 0 0; }
+    a { color:var(--accent); }
+    .cta { display:flex; flex-wrap:wrap; gap:12px; margin:24px 0; }
+    .btn { display:inline-block; padding:10px 18px; border-radius:10px; border:1px solid var(--accent); text-decoration:none; font-weight:600; }
+    .btn.primary { background:var(--accent); color:#04130d; }
+    ul { padding-left:1.2rem; } li { margin:6px 0; }
+    code, pre { background:var(--card); border:1px solid var(--border); border-radius:6px; }
+    code { padding:1px 5px; } pre { padding:12px; overflow:auto; }
+    .note { color:var(--muted); font-size:.9rem; }
+    hr { border:0; border-top:1px solid var(--border); margin:2.5rem 0; }
+    footer { color:var(--muted); font-size:.85rem; margin-top:3rem; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <img src="icon.png" width="72" height="72" alt="">
+      <div>
+        <h1>BonXai Pruner ✂🌿</h1>
+        <p class="tag">Filtros con IA para tu feed de X, con Gemini Nano dentro de Chrome. Gratis y privado.</p>
+      </div>
+    </header>
+
+    <div class="cta">
+      <a class="btn primary" href="https://github.com/ondanueve/BonXai-Pruner/archive/refs/heads/main.zip">Descargar (zip)</a>
+      <a class="btn" href="https://github.com/ondanueve/BonXai-Pruner">Código en GitHub</a>
+    </div>
+
+    <p>Describís en lenguaje natural qué querés ver o no ver (“sin política”, “solo tecnología y poesía”) y la extensión evalúa cada post de x.com con el modelo <strong>Gemini Nano</strong> que ya viene en Chrome. No hay servidores, claves ni telemetría: todo ocurre en tu equipo.</p>
+
+    <h2>Qué hace</h2>
+    <ul>
+      <li><strong>Filtros por tema</strong>: “Ocultar” o “Solo mostrar”, con presets en español.</li>
+      <li><strong>Sin saltos</strong>: el post se ve desenfocado mientras el modelo decide; después queda colapsado en una barra con el motivo y el botón <em>Mostrar</em>.</li>
+      <li><strong>Feed curado</strong>: los posts que pasan tus filtros “Solo mostrar” se juntan en un panel lateral de Chrome, con búsqueda y chips por tema.</li>
+      <li><strong>Ocultar posts como este</strong> y <strong>No debía ocultarse</strong>: tus correcciones se guardan como ejemplos y el modelo aprende de ellas.</li>
+      <li><strong>Autores y media sin IA</strong>: listas de permitidos/bloqueados y reglas de fotos y videos.</li>
+      <li><strong>Caché persistente</strong> y falla de forma segura: si el modelo no está, no se oculta nada.</li>
+      <li><strong>Motor local opcional</strong>: Ollama u otro servidor compatible con OpenAI, solo en <code>localhost</code>.</li>
+    </ul>
+
+    <h2>Instalación</h2>
+    <ol>
+      <li>Descargá el zip y descomprimilo (o clonalo: <code>git clone https://github.com/ondanueve/BonXai-Pruner</code>).</li>
+      <li>En Chrome 138 o superior abrí <code>chrome://extensions</code>, activá el <em>Modo de desarrollador</em> y tocá <em>Cargar descomprimida</em>.</li>
+      <li>Elegí la carpeta <code>extension/</code>.</li>
+      <li>Abrí el popup de BonXai y tocá <em>Descargar modelo</em> si Chrome lo pide.</li>
+    </ol>
+    <p class="note">Requiere un equipo que soporte Gemini Nano en Chrome (ver los requisitos oficiales de la Prompt API). Si no, podés usar el motor local opcional. No está publicada en la Chrome Web Store.</p>
+
+    <hr>
+
+    <h2 lang="en">English</h2>
+    <p lang="en">BonXai Pruner is a free Manifest V3 Chrome extension that filters your X feed with Chrome's built-in <strong>Gemini Nano</strong> (Prompt API, Chrome 138+). Describe in plain language what to hide or show only; posts are blurred while classified, then collapsed with the reason. It has a curated feed side panel, a “Hide posts like this” button, one-click corrections used as few-shot examples, author and media rules without AI, a persistent cache, and an optional <code>localhost</code> engine (Ollama). No cloud, no API keys, no telemetry.</p>
+    <p lang="en">Install: <a href="https://github.com/ondanueve/BonXai-Pruner/archive/refs/heads/main.zip">download the zip</a>, open <code>chrome://extensions</code>, enable Developer mode, click “Load unpacked” and pick the <code>extension/</code> folder.</p>
+
+    <footer>
+      MIT · <a href="https://github.com/ondanueve/BonXai-Pruner">github.com/ondanueve/BonXai-Pruner</a>
+    </footer>
+  </div>
+</body>
+</html>
